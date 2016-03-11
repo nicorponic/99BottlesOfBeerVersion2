@@ -15,15 +15,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int x = 99;
 
-        for (; x >= 0; x--) {
+        for (int x = 99; x >= 0; x--) {
             switch (x) {
                 case 2:
 
-                    System.out.println(x + " bottles of beer on the wall");
-                    System.out.println(x + " bottles of beer");
-                    System.out.println("Take one down, pass it around");
+                    singFirstVerse(x);
                     System.out.println("One more bottle of beer");
                     System.out.println();
                     break;
@@ -39,15 +36,21 @@ public class Main {
                     System.out.println("Better go to the store and buy some more.");
                     break;
                 default:
-                    System.out.println(x + " bottles of beer on the wall");
-                    System.out.println(x + " bottles of beer");
-                    System.out.println("Take one down, pass it around");
+                    singFirstVerse(x);
                     System.out.println((x - 1) + " bottles of beer on the wall");
                     System.out.println();
                     break;
             }
 
         }
+
+    }
+
+    static void singFirstVerse(int a) {
+
+        System.out.println(a + " bottles of beer on the wall");
+        System.out.println(a + " bottles of beer");
+        System.out.println("Take one down, pass it around");
 
     }
 }
